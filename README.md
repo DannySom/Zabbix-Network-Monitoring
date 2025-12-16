@@ -59,7 +59,7 @@ To access our new Zabbix server, I entered http://(your-server-ip-address)/zabbi
 <br />
 
 <p>
-<img width="1307" height="556" alt="Screenshot 2025-12-01 184609" src="https://github.com/user-attachments/assets/8adbc798-a030-4386-a044-5bf4eae237ea" /> <img width="1338" height="719" alt="Screenshot 2025-12-01 184802" src="https://github.com/user-attachments/assets/af8a829f-c1e8-4d91-a59c-305e1e773a06" />
+<img width="400" height="350" alt="Screenshot 2025-12-01 184609" src="https://github.com/user-attachments/assets/8adbc798-a030-4386-a044-5bf4eae237ea" /> <img width="400" height="350" alt="Screenshot 2025-12-01 184802" src="https://github.com/user-attachments/assets/af8a829f-c1e8-4d91-a59c-305e1e773a06" />
 
 </p>
 <p>
