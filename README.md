@@ -97,7 +97,7 @@ After any changes to the configuration, you need to restart the agent. </p>
 <br />
 
 <p>
-<img width="600" alt="Screenshot 2025-12-01 191610" src="https://github.com/user-attachments/assets/5b940e7e-f95f-4457-9c03-a47fdc344385" />
+<img width="600" alt="Screenshot 2025-12-01 192338" src="https://github.com/user-attachments/assets/3d4f120f-f93e-49ab-885e-1e7c2b5fd1ee" />
 </p>
 <p>
 Now to configure a new host using the Zabbix Server user interface. To do this, go to Data Collection → Hosts → Create Host. </p>
@@ -106,18 +106,20 @@ Set Host name → Host-1, set template to Linux by Zabbix Agent, Host Groups →
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="600" alt="Screenshot 2025-12-01 193106" src="https://github.com/user-attachments/assets/e2e73664-e995-4358-9ff4-69a099be54a0" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Go to Monitoring → Latest Data → Select Host-1 </p>
+Here, we can see that the Zabbix server is getting information back from Host A
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/d26a81f9-a78b-4bd9-9832-24fb0d7dc101" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Things we can do to check that we have configured the right information is to use tools like ping or telnet. If we ping Host-1's IP address from Zabbix Server, I'm getting a response. If Ping doesn't work, then it could be that you have a firewall blocking ICMP or that you have the wrong IP address.
 </p>
 <br />
 
