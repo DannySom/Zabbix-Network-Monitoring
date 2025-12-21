@@ -139,15 +139,15 @@ In the setup, it has already found my host name of my computer so I just need to
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/1f607b12-9b3d-4061-bec2-f664c0b16ca0" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now if we go to Task Manager, click Zabbix Agent then Open Service, then double click Zabbix Agent inside there, we can see the path to executable and the configuration file. You can also start, stop, pause, and resume the service.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/3a2ad5b5-10dc-4712-81bb-031ad461bd4c" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, go to "C:\Program Files\Zabbix Agent 2." From there, you can see the log file. Open the log file then if you go to the bottom, no active checks on server, host not found.
 </p>
 <br />
 
