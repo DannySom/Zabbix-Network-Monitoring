@@ -124,15 +124,18 @@ Things we can do to check that we have configured the right information is to us
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="400" height="400" alt="Screenshot 2025-12-20 184226" src="https://github.com/user-attachments/assets/6964683f-3d89-4850-be27-5e21184978f4" /> <img width="400" alt="Screenshot 2025-12-20 184803" src="https://github.com/user-attachments/assets/8abb00ce-1125-484c-bd61-3b61c532e5d8" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now we will add a Zabbix agent and will configure it to using Active Checks on a Windows host.</p>
+Active checks means that the agent initiates the connection and pushes data to the server on its own schedule. This approach is especially useful for hosts behind NAT or firewalls, where inbound connections from the server are blocked. By using active checks, the agent can send data outbound without requiring any firewall changes. </p>
+In the setup, it has already found my host name of my computer so I just need to type in the Zabbix server's IP address.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="491" height="410" alt="Screenshot 2025-12-20 184803" src="https://github.com/user-attachments/assets/b15968d6-f862-4cb4-840a-cbc3c475a646" />
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
