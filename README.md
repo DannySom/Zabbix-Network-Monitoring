@@ -8,23 +8,23 @@ Zabbix is an open-source enterprise monitoring platform used by organizations to
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Internet Information Services (IIS)
+- Digital Ocean (Virtual Machines/Compute)
+- Putty
 
 <h2>Operating Systems Used </h2>
 
-- Windows 10</b> (21H2)
+- Ubuntu 24.04 (LTS) x64
+- Windows 11 x64
 
 
-<h2>Installation Steps</h2>
+<h2>Installing and Configuring Zabbix Server and Agents Steps</h2>
 
 <p>
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/d19afaf5-1694-420e-bf65-1ce78a7c5aaf" />
 
 </p>
 <p>
-created vm
+In Digital Ocean I created a Ubuntu Linux Virtual Machine called Zabbix server. This is where we're going to install and configure the Zabbix Server to monitor the Hosts.
 </p>
 <br />
 
@@ -33,7 +33,7 @@ created vm
 
 </p>
 <p>
-Downloaded putty and ssh into vm
+Downloaded putty and ssh into vm.
 </p>
 <br />
 
