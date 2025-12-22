@@ -71,7 +71,7 @@ Now, I will install Zabbix Agent on a new VM called Host-1 on the same network a
 <img width="600" alt="Screenshot 2025-12-01 185759" src="https://github.com/user-attachments/assets/f598be1f-51b1-4955-8066-6dd7eaf1d127" />
 </p>
 <p>
-Now we will install Zabbix agent onto Host-1 VM. Also make sure that your agents are using the same version as your Zabbix server. The following command i typed are shown below. </p>
+Now we will install Zabbix agent onto Host-1 VM. Also make sure that your agents are using the same version as your Zabbix server. The following command I typed are shown below: </p>
 
 
 ```wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-1+ubuntu24.04_all.deb``` </p>
@@ -157,7 +157,7 @@ Next, go to "C:\Program Files\Zabbix Agent 2." From there, you can see the log f
 <p>
 To solve this, go onto the Zabbix interface and creae a new host. </p>
 Monitoring → Host → Create Host </p>
-From there, type in the host name then select the template, "Windows by Zabbix agent active." and in the host group type, "Windows Server." then add host. </p>
+From there, type in the host name then select the template, "Windows by Zabbix agent active." and in the host group type, "Windows Server." then add host. Ensure your hostname in the Zabbix UI matches the Hostname in the agents' configuration file. </p>
 Remember that Active checks are pushing data to the server and Passive checks is when zabbix makes a request to the agents. An agent running Active checks is less work for the Zabbix server because it doesn't have to manage a queue of items that its waiting for responses for.
 </p>
 <br />
@@ -166,7 +166,9 @@ Remember that Active checks are pushing data to the server and Passive checks is
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+To read the Zabbix Server logs, on the Zabbix Server type,
+To read the Zabbix Agent log files on the host, </p>
+ ```tail -f /var/log/zabbix/zabbix_agentd.log```
 </p>
 <br />
 
