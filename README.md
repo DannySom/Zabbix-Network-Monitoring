@@ -167,10 +167,22 @@ Remember that Active checks are pushing data to the server and Passive checks is
 </p>
 <p>
 To read the Zabbix Server logs, on the Zabbix Server type, </p>
- ```dpkg -i zabbix-release_7.0-1+ubuntu24.04_all.deb``` </p>
+
+```bash
+sudo tail -n 200 -F /var/log/zabbix/zabbix_server.log
+```
+
 To read the Zabbix Agent log files on the host, </p>
-```dpkg -i zabbix-release_7.0-1+ubuntu24.04_all.deb``` </p>
- ```tail -f /var/log/zabbix/zabbix_agentd.log```
+
+```bash
+sudo tail -n 200 -F /var/log/zabbix/zabbix_agentd.log
+```
+
+To follow both logs at the same time:
+
+```bash
+sudo tail -n 200 -F /var/log/zabbix/zabbix_server.log /var/log/zabbix/zabbix_agentd.log
+```
 </p>
 <br />
 
@@ -178,7 +190,7 @@ To read the Zabbix Agent log files on the host, </p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+raaaaa
 </p>
 <br />
 
