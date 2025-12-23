@@ -191,34 +191,45 @@ sudo tail -n 200 -F /var/log/zabbix/zabbix_server.log /var/log/zabbix/zabbix_age
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/0bc62333-f192-424b-9e5f-09ac6a14e549" />
 </p>
 <p>
-Now I have added my Windows host and all of the hosts I need. Host 1 and 2 configured with Active Checks because they're in the same network but Windows host is configured with Active Checks because it's behind a NAT.</p>
-I also added Host 2 in the background using Centos 9 Stream x64. The commands are typed are shown below: </p>
+I have now added my Windows host and all of the hosts I need. Host 1 and 2 are configured with Active Checks because they're in the same network but Windows host is configured with Active Checks because it's behind a NAT.</p>
+I also added Host 2 in the background using Centos 9 Stream x64 from Digital Ocean. The commands are typed are shown below: </p>
+
+```sudo yum install -y nano```
+
+and edit the EPEL repo configuration file,
+
+```sudo nano /etc/yum.repos.d/epel.repo```
+
+You will see a blank file. Add the following:
 
 ```bash
-# Install nano on CentOS/RHEL
-sudo yum install -y nano
+[epel]
+...
+excludepkgs=zabbix*
 ```
 
-and edit the file, </p>
+```rpm -Uvh https://repo.zabbix.com/zabbix/7.0/centos/9/x86_64/zabbix-release-latest-7.0.el9.noarch.rpm```
 
-```bash
-# Edit the EPEL repo configuration
-sudo nano /etc/yum.repos.d/epel.repo
-```
+Once you install the Zabbix repository package, the system will know where to find Zabbix packages so you can install the agent easily with these commands:
 
-   - add [epel] <p>
-... </p>
-excludepkgs=zabbix* <p>
-rpm -Uvh https://repo.zabbix.com/zabbix/7.0/centos/9/x86_64/zabbix-release-latest-7.0.el9.noarch.rpm </p>
-dnf clean all </p>
-dnf install zabbix-agent </p>
-Since the config file is configured to default as well, you well need to change that, </p>
-nano /etc/zabbix/zabbix_agentd.conf </p>
+```dnf clean all```
+
+```dnf install zabbix-agent```
+
+Since the config file is configured to default as well, you will need to change the config file, </p>
+
+```nano /etc/zabbix/zabbix_agentd.conf```
+
+
 edit the following, </p>
 Server=<ZABBIX_SERVER_IP> <p>
-ServerActive=<ZABBIX_SERVER_IP> <p> Hostname=<THIS_HOSTNAME> </p>
-Verified the agent status and logs: agent successfully connected to the Zabbix server and began sending metrics.
-service zabbix agent start
+ServerActive=<ZABBIX_SERVER_IP> <p> Hostname=Host-2 </p>
+Then verify the agent status and logs: agent successfully connected to the Zabbix server and began sending metrics.
+
+```service zabbix-agent start```
+
+```service zabbix-agent status```
+
 </p>
 <br />
 
