@@ -187,10 +187,27 @@ sudo tail -n 200 -F /var/log/zabbix/zabbix_server.log /var/log/zabbix/zabbix_age
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/0bc62333-f192-424b-9e5f-09ac6a14e549" />
 </p>
 <p>
-raaaaa
+Now I have added my Windows host and all of the hosts I need. Host 1 and 2 configured with Active Checks because they're in the same network but Windows host is configured with Active Checks because it's behind a NAT.</p>
+I also added Host 2 in the background using Centos 9 Stream x64. The commands are typed are shown below: </p>
+```yum install -y nano```
+and edit the file, </p>
+nano/etc/yum.repos.d/epel.repo <p>
+   - add [epel] <p>
+... </p>
+excludepkgs=zabbix* <p>
+rpm -Uvh https://repo.zabbix.com/zabbix/7.0/centos/9/x86_64/zabbix-release-latest-7.0.el9.noarch.rpm </p>
+dnf clean all </p>
+dnf install zabbix-agent </p>
+Since the config file is configured to default as well, you well need to change that, </p>
+nano /etc/zabbix/zabbix_agentd.conf </p>
+edit the following, </p>
+Server=<ZABBIX_SERVER_IP> <p>
+ServerActive=<ZABBIX_SERVER_IP> <p>
+Hostname=<THIS_HOSTNAME> </p>
+service zabbix agent start
 </p>
 <br />
 
