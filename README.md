@@ -205,8 +205,7 @@ Since the config file is configured to default as well, you well need to change 
 nano /etc/zabbix/zabbix_agentd.conf </p>
 edit the following, </p>
 Server=<ZABBIX_SERVER_IP> <p>
-ServerActive=<ZABBIX_SERVER_IP> <p>
-Hostname=<THIS_HOSTNAME> </p>
+ServerActive=<ZABBIX_SERVER_IP> <p> Hostname=<THIS_HOSTNAME> </p>
 service zabbix agent start
 </p>
 <br />
