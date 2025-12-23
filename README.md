@@ -192,9 +192,19 @@ sudo tail -n 200 -F /var/log/zabbix/zabbix_server.log /var/log/zabbix/zabbix_age
 <p>
 Now I have added my Windows host and all of the hosts I need. Host 1 and 2 configured with Active Checks because they're in the same network but Windows host is configured with Active Checks because it's behind a NAT.</p>
 I also added Host 2 in the background using Centos 9 Stream x64. The commands are typed are shown below: </p>
-```yum install -y nano```
+
+```bash
+# Install nano on CentOS/RHEL
+sudo yum install -y nano
+```
+
 and edit the file, </p>
-nano/etc/yum.repos.d/epel.repo <p>
+
+```bash
+# Edit the EPEL repo configuration
+sudo nano /etc/yum.repos.d/epel.repo
+```
+
    - add [epel] <p>
 ... </p>
 excludepkgs=zabbix* <p>
