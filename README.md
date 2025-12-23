@@ -14,6 +14,7 @@ Zabbix is an open-source enterprise monitoring platform used by organizations to
 <h2>Operating Systems Used </h2>
 
 - Ubuntu 24.04 (LTS) x64
+- Centos 9 Stream x64
 - Windows 11 x64
 
 
@@ -24,7 +25,7 @@ Zabbix is an open-source enterprise monitoring platform used by organizations to
 
 </p>
 <p>
-In Digital Ocean I created a Ubuntu Linux Virtual Machine called Zabbix server. This is where we're going to install and configure the Zabbix Server to monitor the Hosts.
+First I deployed a Ubuntu Linux Virtual Machine on DigitalOcean to serve as the Zabbix Server, which I will install and configure to monitor multiple hosts in the lab environment.
 </p>
 <br />
 
@@ -33,7 +34,7 @@ In Digital Ocean I created a Ubuntu Linux Virtual Machine called Zabbix server. 
 
 </p>
 <p>
-Downloaded putty and ssh into vm.
+Then I installed PuTTY on my local machine and established a secure SSH connection to the Ubuntu VM, enabling remote administration and configuration of the Zabbix Server.
 </p>
 <br />
 
@@ -216,6 +217,7 @@ nano /etc/zabbix/zabbix_agentd.conf </p>
 edit the following, </p>
 Server=<ZABBIX_SERVER_IP> <p>
 ServerActive=<ZABBIX_SERVER_IP> <p> Hostname=<THIS_HOSTNAME> </p>
+Verified the agent status and logs: agent successfully connected to the Zabbix server and began sending metrics.
 service zabbix agent start
 </p>
 <br />
