@@ -107,12 +107,11 @@ Set Host name → Host-1, set template to Linux by Zabbix Agent, Host Groups →
 <br />
 
 <p>
-<img width="600" alt="Screenshot 2025-12-01 193106" src="https://github.com/user-attachments/assets/e2e73664-e995-4358-9ff4-69a099be54a0" />
-
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/54dc4847-e096-4b92-b69b-9652fea005e9" />
 </p>
 <p>
 Go to Monitoring → Latest Data → Select Host-1 </p>
-Here, we can see that the Zabbix server is getting information back from Host A
+Here, we can verify that the Zabbix server is getting information back from Host A
 </p>
 <br />
 
