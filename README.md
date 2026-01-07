@@ -210,65 +210,45 @@ Then verify the agent status and logs: agent successfully connected to the Zabbi
 </p>
 <br />
 
-<h2>Troubleshooting Agent Configuration</h2>
+<h2>Troubleshooting Server and Agent Configuration</h2>
 
 <p>
+<ins>Zabbix Server Log</ins>
+
+**Location:** `/var/log/zabbix/zabbix_server.log`
+
+   - This server log records all internal operations of the Zabbix server.
+   - Inside, you can check the information of startup, shutdown, or crash events of the zabbix server and when it happened.
+   - You can also check Database query status for the user interface in case if it failed or stopped working.
+     
 To read the Zabbix Server logs, on the Zabbix Server type, </p>
 
 ```tail -f /var/log/zabbix/zabbix_server.log```
+
+<ins>Zabbix Agent Log</ins>
+
+**Location:** `/var/log/zabbix/zabbix_agentd.log`
+
+   - This agent log tracks the performance and communication of Zabbix agents on monitored hosts.
+   - Here, I can verify that data is being collected correctly and troubleshoot host-specific issues.
+   - This can also contain communication attempts with the Zabbix server and errors, warnings, or configuration issues with the agent.
 
 To read the Zabbix Agent log files on the host, </p>
 
 ```tail -f /var/log/zabbix/zabbix_agentd.log```
 
+</p>
+<ins>Issue with host showing red icon that reads not available/connected on Zabbix Server:</ins> </p>
+
+   - Check the conf file and verify you have the right IP address by typing `nano /etc/zabbix/zabbix_agentd.conf` 
+   - Check if you have the right IP address on host interface.
+   - On the host, check if the agent is currently active: `sudo systemctl status zabbix-agent`
+   - Make sure it is enabled to start on boot: `sudo systemctl enable zabbix-agent`
+   - Check the agent logs for errors related to this host
+ 
 
 </p>
 <br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+In the next section of the project, I will create and implement items, triggers, and graphs to monitor metrics and data. <p>
+https://github.com/DannySom/Implementing-Host-Monitoring-and-Triggers
