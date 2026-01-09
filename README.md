@@ -10,6 +10,8 @@ Zabbix is an open-source enterprise monitoring platform used by organizations to
 
 - Digital Ocean (Virtual Machines/Compute)
 - Putty
+- Zabbix UI
+- MySQL
 
 <h2>Operating Systems Used </h2>
 
