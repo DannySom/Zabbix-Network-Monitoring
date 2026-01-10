@@ -157,7 +157,7 @@ Next, go to "C:\Program Files\Zabbix Agent 2." From there, you can see the log f
 <img width="600" alt="Screenshot 2025-12-20 192631" src="https://github.com/user-attachments/assets/e4ca8523-c0f4-4592-98ba-5483c176d5ac" />
 </p>
 <p>
-To solve this, go onto the Zabbix interface and creae a new host. </p>
+To solve this, go onto the Zabbix interface and create a new host. </p>
 Monitoring → Host → Create Host </p>
 From there, type in the host name then select the template, "Windows by Zabbix agent active." and in the host group type, "Windows Server." then add host. Ensure your hostname in the Zabbix UI matches the Hostname in the agents' configuration file. </p>
 Remember that Active checks are pushing data to the server and Passive checks is when zabbix makes a request to the agents. An agent running Active checks is less work for the Zabbix server because it doesn't have to manage a queue of items that its waiting for responses for.
